@@ -1,78 +1,46 @@
 <?php
-$this->title = 'ahal.uz';
+$this->title = 'Изделия из кожи ручной работы в Ташкенте, купить подарки из натуральной кожи | ahal.uz';
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => 'Изделия из кожи ручной работы в Ташкенте, Изделия из кожи в Ташкенте'
+]);
+$this->registerMetaTag([
+    'property' => 'og:title',
+    'content' => 'Изделия из кожи ручной работы в Ташкенте, купить подарки из натуральной кожи, кожаные изделия от ahal'
+]);
+$this->registerMetaTag([
+    'property' => 'og:image',
+    'content' => '/images/og-image.jpg'
+]);
 ?>
+<aside id="fh5co-hero" clsas="js-fullheight">
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            <li style="background-image: url(images/slide_1_ahal.jpg);">
+                <div class="container">
+                    <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+                        <div class="fh5co-property-brief-inner">
+                            <div class="fh5co-box">
 
-    <aside id="fh5co-hero" clsas="js-fullheight">
-        <div class="flexslider js-fullheight">
-            <ul class="slides">
-                <li style="background-image: url(images/slide_1.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-
-                                    <h3><a href="#">Villa In Hialeah, Dade County</a></h3>
-                                    <div class="price-status">
-                                        <span class="price">$540,000 <a href="#" class="tag">For Sale</a></span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta magni amet atque doloremque velit unde adipisci omnis hic quaerat.</p>
-
-                                    <p class="fh5co-property-specification">
-                                        <span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-                                    </p>
-
-                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-
-
+                                <h3><a href="#">Card Holder</a></h3>
+                                <div class="price-status">
+                                    <span class="price">120,000 so`m <a href="#" class="tag">Продается</a></span>
                                 </div>
+                                <p>Лучшее время — время подарков. И отличный вариант для него — элегантный card holder из коричневой кожи, полностью выполненный вручную.</p>
+
+                                <!--                                    <p class="fh5co-property-specification">-->
+                                <!--                                        <span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>-->
+                                <!--                                    </p>-->
+
+                                <p><a href="#" class="btn btn-primary">Подробно...</a></p>
                             </div>
                         </div>
                     </div>
-                </li>
-                <li style="background-image: url(images/slide_2.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    <h3><a href="#">15 Apartments Of Type B</a></h3>
-                                    <div class="price-status">
-                                        <span class="price">$2,200<span class="per">/Month</span> <a href="#" class="tag">For Rent</a></span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta magni amet atque doloremque velit unde adipisci omnis hic quaerat.</p>
-                                    <p class="fh5co-property-specification">
-                                        <span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(images/slide_3.jpg);">
-                    <div class="container">
-                        <div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-                            <div class="fh5co-property-brief-inner">
-                                <div class="fh5co-box">
-                                    <h3><a href="#">401 Biscayne Boulevard, Miami</a></h3>
-                                    <div class="price-status">
-                                        <span class="price">$1,540,000 <a href="#" class="tag">For Sale</a></span>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta magni amet atque doloremque velit unde adipisci omnis hic quaerat.</p>
-                                    <p class="fh5co-property-specification">
-                                        <span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
-                                    </p>
-                                    <p><a href="#" class="btn btn-primary">Learn more</a></p>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-    </aside>
+                </div>
+            </li>
+        </ul>
+    </div>
+</aside>
     <div id="best-deal">
         <div class="container">
             <div class="row">

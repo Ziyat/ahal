@@ -27,9 +27,7 @@ class AppAsset extends AssetBundle
         'css/style.css',
     ];
     public $js = [
-//        "js/jquery.min.js",
         "js/jquery.easing.1.3.js",
-//        'js/bootstrap.min.js',
         "js/jquery.waypoints.min.js",
         "js/jquery.flexslider-min.js",
         "js/main.js"
@@ -37,5 +35,32 @@ class AppAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
+    ];
+}
+
+class HeadAppAsset extends AssetBundle
+{
+    public $basePath = '@webroot';
+    public $baseUrl = '@web';
+    public $js = [
+        "js/modernizr-2.6.2.min.js",
+    ];
+
+    public $jsOptions = [
+        'position' => \yii\web\View::POS_HEAD
+    ];
+}
+
+class LtAppAsset extends AssetBundle
+{
+    public $basePath = '@webroot';
+    public $baseUrl = '@web';
+    public $js = [
+        "js/respond.min.js"
+    ];
+
+    public $jsOptions = [
+        'condition' => 'lte IE9',
+        'position' => \yii\web\View::POS_HEAD
     ];
 }

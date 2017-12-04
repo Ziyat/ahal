@@ -8,9 +8,14 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use yii\helpers\Url;
 use app\assets\AppAsset;
+use app\assets\HeadAppAsset;
+use app\assets\LtAppAsset;
 
 AppAsset::register($this);
+HeadAppAsset::register($this);
+LtAppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -36,6 +41,7 @@ AppAsset::register($this);
     <meta name="twitter:card" content="" />
 
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
 </head>
 <body>
@@ -45,14 +51,14 @@ AppAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="header-inner">
-                    <h1><a href="/">Ahal<span>.</span></a></h1>
+                    <h1><a href="/"><img src="<?= Url::to('/images/ahal_Label.png')?>" alt=""></a></h1>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="/products"><?= Yii::t('app','Products')?></a></li>
-                            <li><a href="/gallery"><?= Yii::t('app','gallery')?></a></li>
-                            <li><a href="/about"><?= Yii::t('app','about')?></a></li>
-                            <li class="call"><a href="tel://123456789"><i class="icon-phone"></i> +998 97 411 5053</a></li>
-                            <li class="cta"><a href="contact.html"><?= Yii::t('app','Get in touch')?></a></li>
+                            <li><a href="<?= Url::to('/product')?>"><?= Yii::t('app','Products')?></a></li>
+                            <li><a href="<?= Url::to('/gallery')?>"><?= Yii::t('app','Gallery')?></a></li>
+                            <li><a href="<?= Url::to('/about')?>"><?= Yii::t('app','About')?></a></li>
+                            <li class="call"><a href="tel:+998974115053"><i class="icon-phone"></i> +998 97 411 5053</a></li>
+                            <li class="cta"><a href="<?= Url::to('/contact')?>"><?= Yii::t('app','Get in touch')?></a></li>
                         </ul>
                     </nav>
                 </div>

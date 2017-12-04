@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
+$this->title = 'Product';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">

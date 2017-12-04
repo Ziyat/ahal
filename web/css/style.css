@@ -12,7 +12,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Varela Round", Arial, sans-serif;
+  font-family: "Comfortaa", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -39,7 +39,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Varela Round", Arial, sans-serif;
+  font-family: "Comfortaa", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Varela Round", Arial, sans-serif;
+  font-family: "Comfortaa", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 30px;
@@ -378,9 +378,14 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 700;
   line-height: 0;
   font-size: 30px;
+  margin: 14px 0 0 0 !important;
 }
 #fh5co-header h1 a {
   color: white;
+}
+#fh5co-header h1 a > img {
+  max-width: 150px;
+  opacity: 0.8;
 }
 #fh5co-header h1 a > span {
   color: #118DF0;

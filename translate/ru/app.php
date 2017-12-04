@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'Hello' => 'Привет',
+    'Products' => 'Продукция',
+    'Gallery' => 'Галерея',
+    'About' => 'О Нас',
+    'Verification Code' => 'Проверочный код',
 ];
