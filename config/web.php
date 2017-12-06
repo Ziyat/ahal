@@ -11,10 +11,16 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'lT924BdWwETkqHUKVXXzdxbldQIZ78rm',
+            'baseUrl'=> '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -56,18 +62,24 @@ $config = [
                 ],
             ],
         ],
+
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
             'languages' => ['ru','en'],
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'ignoreLanguageUrlPatterns' => [
+                // route pattern => url pattern
+
+            ],
             'rules' => [
                 '' => 'site/index',
                 '<_a:product|gallery|about|contact|signup|login>' => 'site/<_a>',
-                '<_c:[\w\-]+>' => '<_c>/index',
-                '<_c:[\w\-]+>/<id:\d+>' => '<_c>/view',
-                '<_c:[\w\-]+>/<_a:[\w-]+>' => '<_c>/<_a>',
-                '<_c:[\w\-]+>/<id:\d+>/<_a:[\w-]+>' => '<_c>/<_a>',
+//                '<_c:[\w\-]+>' => '<_c>/index',
+//                '<_c:[\w\-]+>/<id:\d+>' => '<_c>/view',
+//                '<_c:[\w\-]+>/<_a:[\w-]+>' => '<_c>/<_a>',
+//                '<_c:[\w\-]+>/<id:\d+>/<_a:[\w-]+>' => '<_c>/<_a>',
+//                '<module:[\w\-]+>/<controller:[\w\-]+>/<action:[\w\-]+>' => '<module>/<controller>/<action>',
             ],
         ],
 
