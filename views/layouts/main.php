@@ -5,17 +5,18 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use yii\helpers\Url;
 use app\assets\AppAsset;
 use app\assets\HeadAppAsset;
 use app\assets\LtAppAsset;
+use app\assets\OwlAsset;
+use app\assets\MainAsset;
 
 AppAsset::register($this);
 HeadAppAsset::register($this);
 LtAppAsset::register($this);
+OwlAsset::register($this);
+MainAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

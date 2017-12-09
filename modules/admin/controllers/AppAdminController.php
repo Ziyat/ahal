@@ -9,6 +9,7 @@ class AppAdminController extends Controller
 {
     public function behaviors()
     {
+        $this->layout = "@app/modules/admin/views/layouts/main";
         return [
             'access' => [
                 'class' => AccessControl::className(),

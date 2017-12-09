@@ -22,15 +22,12 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/animate.css',
         'css/icomoon.css',
-//        'css/bootstrap.css',
-        'css/flexslider.css',
-        'css/style.css',
+        'css/flexslider.css'
     ];
     public $js = [
         "js/jquery.easing.1.3.js",
         "js/jquery.waypoints.min.js",
-        "js/jquery.flexslider-min.js",
-        "js/main.js"
+        "js/jquery.flexslider-min.js"
     ];
     public $depends = [
         'yii\web\YiiAsset',
@@ -62,5 +59,31 @@ class LtAppAsset extends AssetBundle
     public $jsOptions = [
         'condition' => 'lte IE9',
         'position' => \yii\web\View::POS_HEAD
+    ];
+}
+
+class OwlAsset extends AssetBundle
+{
+
+    public $sourcePath = '@bower';
+
+    public $css = [
+        'owl-carousel2/dist/assets/owl.carousel.min.css',
+        'owl-carousel2/dist/assets/owl.theme.default.css',
+    ];
+    public $js = [
+        'owl-carousel2/dist/owl.carousel.min.js',
+    ];
+}
+
+class MainAsset extends AssetBundle
+{
+    public $basePath = '@webroot';
+    public $baseUrl = '@web';
+    public $css = [
+        'css/style.css',
+    ];
+    public $js = [
+        "js/main.js"
     ];
 }

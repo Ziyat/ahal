@@ -2,7 +2,7 @@
 	
 	'use strict';
 
-
+    $(".owl-carousel").owlCarousel();
 
 	var isMobile = {
 		Android: function() {
