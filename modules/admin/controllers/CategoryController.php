@@ -4,30 +4,14 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\entities\Category;
-use app\entities\CategorySearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use app\entities\CategorySearch;use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
  */
 class CategoryController extends AppAdminController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Category models.
@@ -66,6 +50,11 @@ class CategoryController extends AppAdminController
         $model = new Category();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->thumb = UploadedFile::getInstance($model, 'thumb');
+            if($model->thumb){
+
+                $model->upload($model->id);
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -85,6 +74,11 @@ class CategoryController extends AppAdminController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->thumb = UploadedFile::getInstance($model, 'thumb');
+            if($model->thumb){
+
+                $model->upload($model->id);
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

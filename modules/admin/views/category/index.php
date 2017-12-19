@@ -6,13 +6,12 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $searchModel app\entities\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var GridView yii\grid\GridView */
 
 $this->title = 'Categories';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
@@ -23,8 +22,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
+            [
+                    'attribute' => 'thumb',
+                    'value' => function($model){
+                        return Html::img(\yii\helpers\Url::to(\app\entities\Category::getImg($model->id,'category')));
+                    },
+                    'format' => 'raw',
+            ],
             'title',
             'parent_id',
 

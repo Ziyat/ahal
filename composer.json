@@ -20,7 +20,11 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "codemix/yii2-localeurls": "^1.5",
         "dmstr/yii2-adminlte-asset": "^2.1",
-        "bower-asset/owl-carousel2": "^2.2"
+        "bower-asset/owl-carousel2": "^2.2",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "vova07/yii2-imperavi-widget": "*",
+        "yiisoft/yii2-imagine": "~2.1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

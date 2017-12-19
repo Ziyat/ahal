@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\entities\Category;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -141,6 +142,8 @@ class SiteController extends Controller
      */
     public function actionProduct()
     {
-        return $this->render('product');
+        return $this->render('product',[
+            'categories' => Category::find()->all(),
+        ]);
     }
 }
